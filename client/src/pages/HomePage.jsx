@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-white p-6 space-y-10">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-200 to-blue-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-white p-6 space-y-10">
       {/* Intro */}
       <p className="text-lg leading-relaxed max-w-2xl mx-auto text-center">
         Learn how to master your money — track expenses, grow savings, and stay in control of your finances.
@@ -20,7 +21,7 @@ const HomePage = () => {
   
   {/* 50-30-20 Rule (Left Aligned) */}
   <div className="flex justify-start">
-    <div className="bg-emerald-50 dark:bg-emerald-900 p-5 rounded-lg border-l-4 border-emerald-400 text-gray-700 dark:text-white shadow-sm w-full md:w-1/2">
+    <div className="bg-rose-300 dark:bg-emerald-900 p-5 rounded-lg border-l-4 border-rose-800 text-gray-700 dark:text-white shadow-sm w-full md:w-1/2">
       <h2 className="font-semibold text-emerald-800 dark:text-emerald-200 mb-2">
         💡 The 50-30-20 Rule
       </h2>
@@ -34,7 +35,7 @@ const HomePage = () => {
 
   {/* Why Use BudgetBuddy (Right Aligned) */}
   <div className="flex justify-end">
-    <div className="bg-blue-50 dark:bg-blue-900 p-5 rounded-lg border-l-4 border-blue-400 text-gray-700 dark:text-white shadow-sm w-full md:w-1/2">
+    <div className="bg-blue-300 dark:bg-blue-900 p-5 rounded-lg border-l-4 border-blue-800 text-gray-700 dark:text-white shadow-sm w-full md:w-1/2">
       <h2 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
         ✨ Why Use BudgetBuddy?
       </h2>
@@ -50,6 +51,10 @@ const HomePage = () => {
       <div className="text-center mt-6">
         <p className="text-lg leading-relaxed max-w-2xl mx-auto text-center mb-4">Precision Tracking for Smarter Spending.
       </p>
+      <h4 className="text-lg font-semibold mb-4">Get Started</h4>
+                <p className="text-sm text-gray-800 mb-3">
+                  Take control of your finances today.
+                </p>
         <SignedOut>
           <SignInButton mode="modal">
             <button className="bg-emerald-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-emerald-700 transition duration-300">
@@ -73,7 +78,7 @@ const HomePage = () => {
         <blockquote className="italic text-gray-600 dark:text-gray-300">
           "BudgetBuddy helped me finally stick to a savings plan. The 50-30-20 breakdown is so helpful!"
         </blockquote>
-        <p className="text-sm mt-2 text-right text-gray-500">— Priya S., Software Engineer</p>
+        <p className="text-sm mt-2 text-right text-gray-500">— Jit Mondol, Software Engineer</p>
       </div>
 
       {/* Video */}
@@ -81,8 +86,8 @@ const HomePage = () => {
         <h3 className="text-lg font-semibold mb-2">🎥 Quick Guide to Smart Budgeting</h3>
         <div className="aspect-w-16 aspect-h-9">
           <iframe
-            className="rounded-lg w-full"
-            src="https://www.youtube.com/embed/fd3lLkCBq9s"
+            className="rounded-lg w-full aspect-video"
+            src="https://www.youtube.com/embed/yNaN5kYTNLY"
             title="Smart Budgeting Guide"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
