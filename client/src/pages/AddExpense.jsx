@@ -20,7 +20,7 @@ const AddExpense = () => {
   try {
     const token = await getToken(); // ✅ Get Clerk token
 
-    await api.post("/expenses", form, {
+    await api.post("/api/expenses", form, {
       headers: {
         Authorization: `Bearer ${token}`, // ✅ Send token to backend
       },
