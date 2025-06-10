@@ -73,7 +73,7 @@ const HomePage = () => {
 
         <SignedIn>
           <Link
-            to="/expenses"
+            to="/add-expense"
             className="bg-emerald-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-emerald-700 transition duration-300"
           >
             Go to Your Finances

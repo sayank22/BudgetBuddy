@@ -8,6 +8,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800 text-white px-4 py-10 flex justify-between items-center">
       <ul>
+        <Link to="/" className="text-xl font-semibold">BudgetBuddy</Link>
       <li><Link to="/" className="text-xl font-semibold">💰</Link></li>
       <Link to="/" className="text-xl font-semibold">Expense Tracker</Link></ul>
 
@@ -26,7 +27,7 @@ const Navbar = () => {
           <>
             <SignInButton mode="modal">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded">
-                Sign In
+                Log In
               </button>
             </SignInButton>
             <SignUpButton mode="modal">

@@ -42,7 +42,9 @@ const Footer = () => {
 </Link>
 
           </li>
-          <li className="text-teal-400 font-medium">Tips:</li>
+          <Link to="/details"
+          className="relative font-bold text-purple-300 transition-all duration-300 hover:text-purple-900 hover:scale-105 inline-block after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-purple-400 after:transition-all after:duration-300 hover:after:w-full">Tips:
+          </Link>
           <li>- Your Finances, Secured and Simplified.</li>
           <li>- Trustworthy Tracking. Professional Results.</li>
           <li>- Take Control. Track with Confidence.</li>
