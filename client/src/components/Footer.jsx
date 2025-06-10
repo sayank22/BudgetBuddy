@@ -31,12 +31,12 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-        <h3 className="text-xl font-semibold mb-3 text-red-800">About</h3>
+        <h3 className="text-xl font-semibold mb-3 text-teal-400">About</h3>
         <ul className="space-y-2">
           <li>
             <Link
   to="/about"
-  className="relative font-bold text-red-300 transition-all duration-300 hover:text-purple-900 hover:scale-105 inline-block after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-purple-400 after:transition-all after:duration-300 hover:after:w-full"
+  className="relative font-bold text-purple-300 transition-all duration-300 hover:text-purple-900 hover:scale-105 inline-block after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-purple-400 after:transition-all after:duration-300 hover:after:w-full"
 >
   Who am I
 </Link>
@@ -58,14 +58,14 @@ const Footer = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
         >
           <div>
-  <h3 className="text-xl font-semibold mb-3 text-red-800">Contact Me</h3>
+  <h3 className="text-xl font-semibold mb-3 text-teal-400">Contact Me</h3>
   <ul className="space-y-3">
     <li>
       <a
         href="https://github.com/sayank22/Jivaka"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 p-3 border rounded-lg transition-all duration-300 hover:bg-gray-100 hover:scale-[1.02] hover:shadow-md"
+        className="flex items-center gap-2 p-3 border rounded-lg transition-all duration-300 hover:bg-purple-400 hover:scale-[1.02] hover:shadow-md"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const Footer = () => {
         href="https://www.linkedin.com/in/sayan-kundu-70b5442b6/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 p-3 border rounded-lg transition-all duration-300 hover:bg-blue-50 hover:scale-[1.02] hover:shadow-md"
+        className="flex items-center gap-2 p-3 border rounded-lg transition-all duration-300 hover:bg-green-400 hover:scale-[1.02] hover:shadow-md"
       >
         💼 LinkedIn
       </a>
@@ -91,7 +91,7 @@ const Footer = () => {
     <li>
       <a
         href="mailto:sayank10023@gmail.com"
-        className="flex items-center gap-2 p-3 border rounded-lg transition-all duration-300 hover:bg-red-50 hover:scale-[1.02] hover:shadow-md"
+        className="flex items-center gap-2 p-3 border rounded-lg transition-all duration-300 hover:bg-yellow-400 hover:scale-[1.02] hover:shadow-md"
       >
         📧 Email: sayank10023@gmail.com
       </a>
@@ -101,23 +101,15 @@ const Footer = () => {
         href="https://www.instagram.com/sayankun22/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 p-3 border rounded-lg transition-all duration-300 hover:bg-pink-50 hover:scale-[1.02] hover:shadow-md"
+        className="flex items-center gap-2 p-3 border rounded-lg transition-all duration-300 hover:bg-rose-400 hover:scale-[1.02] hover:shadow-md"
       >
         📷 Instagram
       </a>
     </li>
   </ul>
 </div>
-          <SignedOut>
-            <SignInButton mode="modal">
-              <button className="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 transition duration-300">
-                Sign In
-              </button>
-            </SignInButton>
-          </SignedOut>
         </motion.div>
       </div>
-
       <motion.div
         className="text-center text-gray-800 text-sm mt-10 px-6"
         initial={{ opacity: 0 }}

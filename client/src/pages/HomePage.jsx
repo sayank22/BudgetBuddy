@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-200 to-blue-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-white p-6 space-y-10">
+    <div className="min-h-screen bg-gradient-to-br from-slate-400 to-blue-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-white p-6 space-y-10">
       {/* Intro */}
       <p className="text-lg leading-relaxed max-w-2xl mx-auto text-center">
         Learn how to master your money — track expenses, grow savings, and stay in control of your finances.
@@ -21,31 +21,39 @@ const HomePage = () => {
   
   {/* 50-30-20 Rule (Left Aligned) */}
   <div className="flex justify-start">
-    <div className="bg-rose-300 dark:bg-emerald-900 p-5 rounded-lg border-l-4 border-rose-800 text-gray-700 dark:text-white shadow-sm w-full md:w-1/2">
-      <h2 className="font-semibold text-emerald-800 dark:text-emerald-200 mb-2">
+    <div className="bg-rose-300 dark:bg-emerald-900 p-5 rounded-lg border-l-4 border-rose-800 text-gray-700 dark:text-white shadow-base w-full md:w-3/4">
+      <h2 className="font-bold text-emerald-800 dark:text-emerald-200 mb-2">
         💡 The 50-30-20 Rule
       </h2>
-      <ul className="list-disc pl-6 text-sm space-y-1">
+      <ul className="list-disc pl-6 text-base space-y-1 mb-3">
         <li><strong>50%</strong> → Essentials (rent, food, bills)</li>
         <li><strong>30%</strong> → Wants (entertainment, dining out)</li>
         <li><strong>20%</strong> → Savings & Investments (emergency fund)</li>
       </ul>
+       <Link to="/details" className="flex justify-center text-blue-600 hover:underline">Learn more about saving and investing →</Link>
     </div>
   </div>
 
   {/* Why Use BudgetBuddy (Right Aligned) */}
   <div className="flex justify-end">
-    <div className="bg-blue-300 dark:bg-blue-900 p-5 rounded-lg border-l-4 border-blue-800 text-gray-700 dark:text-white shadow-sm w-full md:w-1/2">
-      <h2 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
-        ✨ Why Use BudgetBuddy?
-      </h2>
-      <ul className="list-disc pl-6 text-sm space-y-1">
-        <li>📊 Visualize your expenses and savings</li>
-        <li>🔔 Smart overspending alerts</li>
-        <li>🎯 Stay aligned with your goals</li>
-      </ul>
+  <div className="bg-blue-300 dark:bg-blue-900 p-5 rounded-lg border-l-4 border-blue-800 text-gray-700 dark:text-white shadow-sm w-full md:w-3/4">
+    <h2 className="font-bold text-blue-800 dark:text-blue-200 mb-4 text-lg md:text-xl">
+      ✨ Why Use BudgetBuddy?
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6 text-base">
+      <div>📊 Visualize your expenses and savings</div>
+      <div>🔔 Smart overspending alerts</div>
+      <div>🎯 Stay aligned with your goals</div>
+      <div>📅 Track daily spending habits</div>
+      <div>📈 Set and stick to monthly limits</div>
+      <div>🔄 Review and adjust your budget easily</div>
+      <div>💼 Build a 6-month emergency fund</div>
+      <div>📘 Learn smart saving and investing tips</div>
+      <div>📉 Identify and reduce wasteful spending</div>
+      <div>✅ Stay accountable with visual progress</div>
     </div>
   </div>
+</div>
 </div>
 {/* Auth */}
       <div className="text-center mt-6">
@@ -72,15 +80,6 @@ const HomePage = () => {
           </Link>
         </SignedIn>
       </div>
-      {/* Testimonial */}
-      <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow max-w-xl mx-auto w-full">
-        <h3 className="text-lg font-semibold mb-2">🌟 What Users Say</h3>
-        <blockquote className="italic text-gray-600 dark:text-gray-300">
-          "BudgetBuddy helped me finally stick to a savings plan. The 50-30-20 breakdown is so helpful!"
-        </blockquote>
-        <p className="text-sm mt-2 text-right text-gray-500">— Jit Mondol, Software Engineer</p>
-      </div>
-
       {/* Video */}
       <div className="max-w-xl mx-auto w-full">
         <h3 className="text-lg font-semibold mb-2">🎥 Quick Guide to Smart Budgeting</h3>
@@ -97,30 +96,47 @@ const HomePage = () => {
 
       {/* Carousel */}
       <div className="max-w-5xl mx-auto">
-        <h3 className="text-lg font-semibold mb-4 text-center">📌 Financial Tips</h3>
-        <Carousel
-          showThumbs={false}
-          showStatus={false}
-          autoPlay
-          infiniteLoop
-          interval={4000}
-          className="rounded-lg"
-        >
-          {["Track Daily Spending", "Set Monthly Limits", "Review & Adjust", "Build Emergency Fund"].map((title, index) => (
-            <div key={index} className="bg-gray-300 dark:bg-gray-800 p-6 rounded-lg shadow text-center">
-              <h4 className="text-xl font-semibold mb-2">{title}</h4>
-              <p className="text-gray-600 dark:text-gray-300">
-                {index === 0 && "Note down every rupee you spend for a week."}
-                {index === 1 && "Create caps for categories like food, travel, and fun."}
-                {index === 2 && "Check your progress weekly & reallocate if needed."}
-                {index === 3 && "Save for 3–6 months of expenses for emergencies."}
-              </p>
-            </div>
-          ))}
-        </Carousel>
+  <h3 className="text-lg font-semibold mb-4 text-center">💬 What People Say About BudgetBuddy</h3>
+  <Carousel
+    showThumbs={false}
+    showStatus={false}
+    autoPlay={true}
+    infiniteLoop={true}
+    interval={2000}
+    stopOnHover={true}  // ⏸️ Pauses when user hovers
+    swipeable={true}
+    emulateTouch={true}
+    className="rounded-lg"
+  >
+    {[
+      {
+        name: "Aarav M.",
+        feedback: "BudgetBuddy helped me finally stick to a savings plan. I’ve saved ₹10,000 in 2 months!",
+      },
+      {
+        name: "Riya S.",
+        feedback: "The alerts for overspending are a game changer. I never realized how much I spent on food before!",
+      },
+      {
+        name: "Karan D.",
+        feedback: "Thanks to BudgetBuddy, I built a 4-month emergency fund within half a year. Love the simplicity.",
+      },
+      {
+        name: "Sneha P.",
+        feedback: "Beautiful UI and practical features. I feel more in control of my money every day.",
+      },
+    ].map((testimonial, index) => (
+      <div key={index} className="bg-yellow-100 dark:bg-yellow-800 p-6 rounded-lg shadow text-center">
+        <p className="text-gray-700 dark:text-gray-200 italic mb-3">
+          “{testimonial.feedback}”
+        </p>
+        <h4 className="text-md font-semibold text-blue-700 dark:text-blue-300">
+          — {testimonial.name}
+        </h4>
       </div>
-
-      
+    ))}
+  </Carousel>
+</div>      
     </div>
   );
 };

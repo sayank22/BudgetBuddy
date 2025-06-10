@@ -6,8 +6,10 @@ const Navbar = () => {
   const { user } = useUser();
 
   return (
-    <nav className="bg-gray-800 text-white px-4 py-6 flex justify-between items-center">
-      <Link to="/" className="text-xl font-semibold">💰 Expense Tracker</Link>
+    <nav className="bg-gray-800 text-white px-4 py-10 flex justify-between items-center">
+      <ul>
+      <li><Link to="/" className="text-xl font-semibold">💰</Link></li>
+      <Link to="/" className="text-xl font-semibold">Expense Tracker</Link></ul>
 
       <div className="flex items-center space-x-4">
         {/* Always visible links */}
@@ -24,7 +26,7 @@ const Navbar = () => {
           <>
             <SignInButton mode="modal">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded">
-                Login
+                Sign In
               </button>
             </SignInButton>
             <SignUpButton mode="modal">

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 
 import HomePage from "./pages/HomePage";
+import Details from "./pages/Details";
 import Dashboard from "./pages/Dashboard";
 import AddExpense from "./pages/AddExpense";
 import Profile from "./pages/Profile";
@@ -17,8 +18,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/details" element={<Details />} />
         <Route path="/about" element={<About />} /> {/* ✅ About route */}
-
         <Route
           path="/dashboard"
           element={
