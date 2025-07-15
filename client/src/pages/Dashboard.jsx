@@ -3,6 +3,7 @@ import SummaryCard from "../components/SummaryCard";
 import ExpenseList from "../components/ExpenseList";
 import axios from "axios";
 import { useAuth } from "@clerk/clerk-react";
+import { toast } from 'sonner';
 
 const Dashboard = () => {
   const [expenses, setExpenses] = useState([]);
@@ -39,6 +40,7 @@ const Dashboard = () => {
       await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/expenses/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
+      toast.info("Expense deleted.");
       setExpenses((prev) => prev.filter((e) => e._id !== id));
     } catch (err) {
       console.error("Delete error", err);
@@ -65,12 +67,15 @@ const Dashboard = () => {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
+      toast.success("Expense updated.");
+
       setExpenses((prev) =>
         prev.map((e) => (e._id === res.data._id ? res.data : e))
       );
       setEditModalOpen(false);
     } catch (err) {
       console.error("Update error", err);
+      toast.error("Not updated.");
     }
   };
 

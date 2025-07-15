@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="bg-gray-800 text-white px-4 py-10 flex justify-between items-center">
       <ul>
         <Link to="/" className="text-xl font-semibold">BudgetBuddy</Link>
-      <li><Link to="/" className="text-xl font-semibold">💰</Link></li>
+      <li><Link to="/" className="text-xl font-semibold">₹</Link></li>
       <Link to="/" className="text-xl font-semibold">Expense Tracker</Link></ul>
 
       <div className="flex items-center space-x-4">

@@ -2,6 +2,7 @@ import AddExpenseForm from "../components/AddExpenseForm";
 import React, { useState } from "react";
 import api from "../api/axios";
 import { useAuth } from "@clerk/clerk-react";
+import { toast } from 'sonner';
 
 const AddExpense = () => {
   const { getToken } = useAuth();
@@ -26,11 +27,11 @@ const AddExpense = () => {
       },
     });
 
-    alert("Expense added!");
-    setForm({ title: "", amount: "", date: "" }); // reset form
+    toast.success("Expense added successfully!")
+    setForm({ title: "", amount: "", date: "" }); 
   } catch (err) {
     console.error("Error adding expense:", err);
-    alert("Error adding expense");
+    toast.error("Expense deleted.");
   }
 };
 
