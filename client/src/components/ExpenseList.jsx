@@ -1,15 +1,16 @@
 import ExpenseItem from "./ExpenseItem";
 
-const ExpenseList = ({ expenses }) => {
+const ExpenseList = ({ expenses, onDelete, onEdit }) => {
   return (
     <div className="space-y-4">
-      {expenses.length === 0 ? (
-        <p className="text-gray-500">No expenses yet.</p>
-      ) : (
-        expenses.map((exp) => (
-          <ExpenseItem key={exp._id} expense={exp} />
-        ))
-      )}
+      {expenses.map(( expense) => (
+        <ExpenseItem
+        key={expense._id}
+        expense={expense}
+        onDelete={onDelete}
+        onEdit={onEdit}
+        />
+      ))}
     </div>
   );
 };
