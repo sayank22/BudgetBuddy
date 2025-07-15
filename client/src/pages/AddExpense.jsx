@@ -31,7 +31,7 @@ const AddExpense = () => {
     setForm({ title: "", amount: "", date: "" }); 
   } catch (err) {
     console.error("Error adding expense:", err);
-    toast.error("Expense deleted.");
+    toast.error("expense is not added.");
   }
 };
 

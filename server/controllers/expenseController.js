@@ -6,12 +6,30 @@ exports.getExpenses = async (req, res) => {
   res.json(expenses);
 };
 
-// POST /api/expenses
 exports.addExpense = async (req, res) => {
-  const newExpense = new Expense(req.body);
-  const saved = await newExpense.save();
-  res.status(201).json(saved);
+  try {
+    const { title, amount, date } = req.body;
+
+    // Validation: ensure required fields are present
+    if (!title || !amount || !date) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    const newExpense = new Expense({
+      title,
+      amount,
+      date: new Date(date),
+      userId: req.userId, 
+    });
+
+    const saved = await newExpense.save();
+    res.status(201).json(saved);
+  } catch (error) {
+    console.error("Error adding expense:", error);
+    res.status(500).json({ message: "Failed to add expense" });
+  }
 };
+
 
 // POST /api/expenses
 exports.updateExpense = async (req, res) => {
